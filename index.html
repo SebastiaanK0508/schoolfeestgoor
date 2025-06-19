@@ -1,12 +1,269 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>School en Volksfeest</title>
-    <link rel="stylesheet" href="style.css">
+    <title>School- en Volksfeest Goor - 150 Jaar Feest!</title>
+    <!-- Laad Google Fonts: Inter voor strakke typografie, en een speelser lettertype voor titels indien gewenst -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <!-- Laad Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fffbeb; /* Zeer licht geel/crème achtergrond */
+            color: #4b5563; /* Donkergrijs voor algemene tekst */
+        }
+        h1, h2 {
+            font-family: 'Bebas Neue', sans-serif; /* Speelser lettertype voor koppen */
+            letter-spacing: 0.05em;
+        }
+        /* Custom Tailwind CSS classes voor de festival gradiënt (geel/oranje/rood) */
+        .bg-gradient-festival {
+            background-image: linear-gradient(to right, #facc15, #f97316); /* Goudgeel naar Oranje */
+        }
+        .text-gradient-festival {
+            background: linear-gradient(to right, #facc15, #f97316);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .button-festival {
+            background-image: linear-gradient(to right, #facc15, #f97316);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+            color: #ffffff;
+            font-weight: 600;
+            padding: 0.75rem 2rem;
+            border-radius: 9999px; /* Volledig afgerond */
+            box-shadow: 0 4px 10px rgba(250, 204, 21, 0.3);
+        }
+        .button-festival:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(250, 204, 21, 0.4);
+        }
+    </style>
 </head>
 <body>
-    
+    <!-- Navigatiebalk -->
+    <nav class="bg-white shadow-md py-4 px-6 md:px-12 fixed w-full z-10 top-0">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <!-- Logo/Titel sectie -->
+            <div class="flex items-center gap-2">
+                <!-- Simpel SVG icoon voor het feest, bijv. een vlag of lint -->
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-yellow-500">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3h16a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V5a2 2 0 012-2zm0 2v14h16V5H3z" fill="currentColor"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7l-2 4h4l-2 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="text-xl font-bold text-gray-800 tracking-wider">
+                    School- en Volksfeest <span class="text-gradient-festival">Goor</span>
+                </div>
+            </div>
+
+            <!-- Navigatiemenu (voor desktop) -->
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Home</a>
+                <a href="#programma" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Programma</a>
+                <a href="#historie" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Historie</a>
+                <a href="#contact" class="text-gray-700 hover:text-orange-600 font-medium transition-colors">Contact</a>
+            </div>
+
+            <!-- Mobiel menu knop (Hamburger icoon) -->
+            <button class="md:hidden focus:outline-none" aria-label="Open menu">
+                <svg class="w-7 h-7 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobiel uitklapmenu (verborgen by default) -->
+        <div id="mobile-menu" class="md:hidden hidden mt-4 flex flex-col space-y-3">
+            <a href="#home" class="block text-gray-700 hover:bg-yellow-50 py-2 px-3 rounded-md">Home</a>
+            <a href="#programma" class="block text-gray-700 hover:bg-yellow-50 py-2 px-3 rounded-md">Programma</a>
+            <a href="#historie" class="block text-gray-700 hover:bg-yellow-50 py-2 px-3 rounded-md">Historie</a>
+            <a href="#contact" class="block text-gray-700 hover:bg-yellow-50 py-2 px-3 rounded-md">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Sectie -->
+    <section id="home" class="relative bg-white pt-32 pb-20 overflow-hidden bg-cover bg-center" style="background-image: url('https://placehold.co/1200x600/FFFBEB/F97316?text=Feest+in+Goor!')">
+        <div class="absolute inset-0 bg-black opacity-30"></div> <!-- Donkerdere overlay -->
+        <div class="max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center justify-center text-center relative z-0">
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-6 text-white drop-shadow-lg">
+                150 JAAR SCHOOL- EN VOLKSFEEST <span class="text-yellow-400">GOOR!</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-yellow-100 mb-8 max-w-2xl drop-shadow">
+                Van 20 t/m 29 juni 2025 vieren we grootst ons jubileum! Kom en vier mee!
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#programma" class="button-festival text-lg">
+                    Bekijk het Programma
+                </a>
+                <a href="#contact" class="bg-white text-orange-600 border border-orange-300 font-semibold py-3 px-8 rounded-full shadow-md hover:bg-gray-50 transition-colors text-lg">
+                    Contact Opnemen
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programma/Activiteiten Sectie -->
+    <section id="programma" class="py-20 bg-yellow-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-gray-800">
+                Het Feest <span class="text-gradient-festival">Programma</span>
+            </h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+                Tien dagen vol plezier voor jong en oud! Mis niets van de hoogtepunten.
+            </p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Programma Item 1: Kinderoptocht -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-yellow-100 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-16 h-16 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8V4m0 12v4m-5-8H4m12 0h4M7.414 7.414L6 6m12 0l-1.414 1.414M6 18l-1.414-1.414m12 0l-1.414-1.414"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Kinderoptocht</h3>
+                    <p class="text-gray-600">
+                        De meest creatieve en kleurrijke kinderoptocht van Overijssel! Een lust voor het oog.
+                    </p>
+                </div>
+
+                <!-- Programma Item 2: Allegorische Optocht -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-yellow-100 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-16 h-16 text-purple-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.218A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.218A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Grote Allegorische Optocht</h3>
+                    <p class="text-gray-600">
+                        Bewonder de indrukwekkende praalwagens, resultaat van maandenlang teamwork!
+                    </p>
+                </div>
+
+                <!-- Programma Item 3: Feesttent & Kermis -->
+                <div class="bg-white p-8 rounded-xl shadow-lg border border-yellow-100 transform hover:scale-105 transition-transform duration-300 ease-in-out">
+                    <div class="flex justify-center mb-6">
+                        <svg class="w-16 h-16 text-green-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v3a2 2 0 01-2 2H5a2 2 0 01-2-2v-3a2 2 0 012-2m7 0V5a2 2 0 00-2-2H9a2 2 0 00-2 2v6m7 0h2m-7 0h-2"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Feesttent & Kermis</h3>
+                    <p class="text-gray-600">
+                        Non-stop muziek, gezelligheid en de leukste attracties voor de hele familie.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historie Sectie -->
+    <section id="historie" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-gray-800">
+                Onze <span class="text-gradient-festival">Rijke Historie</span>
+            </h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-3xl mx-auto">
+                Al 150 jaar een begrip in Goor! Ontdek hoe het School- en Volksfeest is ontstaan en gegroeid.
+            </p>
+            <div class="flex flex-col lg:flex-row items-center justify-center gap-12">
+                <div class="lg:w-1/2 text-left">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Van schoolfeest tot volksfeest</h3>
+                    <p class="text-gray-600 mb-4">
+                        Het School- en Volksfeest Goor begon in 1875 als een bescheiden schoolfeest, bedoeld om de kinderen te motiveren en een onvergetelijke dag te bezorgen aan het einde van het schooljaar. Al snel groeide het uit tot een evenement voor de hele gemeenschap.
+                    </p>
+                    <p class="text-gray-600">
+                        Door de jaren heen heeft het feest zich ontwikkeld met grotere optochten, een vaste plek in het centrum en diverse activiteiten die de band tussen de inwoners van Goor versterken. Het is een traditie die generaties verbindt.
+                    </p>
+                </div>
+                <div class="lg:w-1/2 flex justify-center">
+                    <img src="https://placehold.co/500x350/FACC15/FFFFFF?text=Historie+Goor" alt="Historische afbeelding Goor feest" class="rounded-xl shadow-xl max-w-full h-auto">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wagenbouwers/Gemeenschap Sectie -->
+    <section id="wagenbouwers" class="py-20 bg-yellow-50">
+        <div class="max-w-7xl mx-auto px-6 md:px-12 text-center">
+            <h2 class="text-4xl font-bold mb-4 text-gray-800">
+                De <span class="text-gradient-festival">Kracht van Goor</span>
+            </h2>
+            <p class="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+                De allegorische optocht is het pronkstuk van ons feest, mogelijk gemaakt door onze fantastische wagenbouwers.
+            </p>
+            <img src="https://placehold.co/800x300/FACC15/FFFFFF?text=Wagenbouwers+in+Actie" alt="Wagenbouwers in actie" class="rounded-xl shadow-xl mx-auto max-w-full h-auto">
+            <p class="text-gray-600 mt-8 max-w-3xl mx-auto">
+                Elk jaar steken enthousiaste groepen Gorenaren maandenlang hun energie in het bouwen van de meest ingenieuze en prachtige praalwagens. Hun toewijding en vakmanschap vormen de ziel van de Grote Optocht en dragen bij aan de unieke sfeer van het School- en Volksfeest.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Contact Sectie -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-xl mx-auto px-6 md:px-12">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-800">
+                Neem <span class="text-gradient-festival">Contact</span> Op
+            </h2>
+            <p class="text-lg text-gray-600 text-center mb-8">
+                Heeft u vragen over het feest, wilt u meedoen of heeft u suggesties? We horen het graag!
+            </p>
+
+            <form class="bg-yellow-50 p-8 rounded-xl shadow-lg border border-yellow-100">
+                <div class="mb-5">
+                    <label for="name" class="block text-gray-700 text-sm font-semibold mb-2">Naam</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-3 border border-yellow-200 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all" placeholder="Uw Naam" required>
+                </div>
+                <div class="mb-5">
+                    <label for="email" class="block text-gray-700 text-sm font-semibold mb-2">E-mailadres</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-yellow-200 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all" placeholder="Uw E-mailadres" required>
+                </div>
+                <div class="mb-5">
+                    <label for="message" class="block text-gray-700 text-sm font-semibold mb-2">Bericht</label>
+                    <textarea id="message" name="message" rows="5" class="w-full px-4 py-3 border border-yellow-200 rounded-lg focus:ring-2 focus:ring-orange-400 focus:border-transparent transition-all" placeholder="Uw Bericht" required></textarea>
+                </div>
+                <button type="submit" class="button-festival w-full text-lg">
+                    Verstuur Bericht
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-10 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="flex items-center justify-center gap-2 mb-4">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="text-yellow-400">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3 3h16a2 2 0 012 2v14a2 2 0 01-2 2H3a2 2 0 01-2-2V5a2 2 0 012-2zm0 2v14h16V5H3z" fill="currentColor"/>
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M12 7l-2 4h4l-2 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <div class="text-xl font-bold">
+                    School- en Volksfeest <span class="text-yellow-400">Goor</span>
+                </div>
+            </div>
+            <p class="text-gray-400">&copy; 2025 Stichting School- en Volksfeest Goor. Alle rechten voorbehouden.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Contact</a>
+                <a href="#" class="text-gray-400 hover:text-white transition-colors">Programma (PDF)</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript voor het mobiele menu
+        document.querySelector('button').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Sluit mobiel menu wanneer op een link geklikt wordt
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
 </body>
 </html>

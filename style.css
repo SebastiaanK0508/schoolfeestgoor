@@ -1,9 +1,41 @@
+/*standaard instellingen*/
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 body {
     margin: 0;
     padding: 0;
+    font-family: "Alfa Slab One", serif;
+    font-weight: 200;
+    font-style: normal;
+    background-color: yellow;
 }
 
 html {
     margin: 0;
     padding: 0;
 }
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+h1 {
+    font-size: 3em;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    font-size: 1.2em;
+    margin-top: 20px;
+    background-color: rgb(192, 0, 0);
+}
+/*einde standaard instellingen*/
+
